@@ -1,0 +1,29 @@
+name: Dungeons
+author: Mtihc
+description: Put items in your armor for special abilities.
+main: com.mtihc.minecraft.dungeons.plugin.DungeonPlugin
+depend: [WorldEdit]
+softdepend: []
+version: 1.0
+commands:
+    dungeon:
+        aliases: [dun]
+        description: Type /dungeon ? for more info
+        usage: /dungeon ?
+permissions:
+    dungeon.admin:
+        description: Allows access to all commands
+        default: op
+        children:
+            dungeon.create: true
+            dungeon.delete: true
+            dungeon.edit: true
+    dungeon.create:
+        description: Allows you to create dungeons
+        default: op
+    dungeon.delete:
+        description: Allows you to delete dungeons
+        default: op
+    dungeon.edit:
+        description: Allows you to edit dungeons
+        default: op
